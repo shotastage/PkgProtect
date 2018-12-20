@@ -10,6 +10,7 @@
 		2573038421CB1F62007B2295 /* PkgProtect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2573037A21CB1F61007B2295 /* PkgProtect.framework */; };
 		2573038921CB1F62007B2295 /* PkgProtectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2573038821CB1F62007B2295 /* PkgProtectTests.swift */; };
 		2573038B21CB1F62007B2295 /* PkgProtect.h in Headers */ = {isa = PBXBuildFile; fileRef = 2573037D21CB1F61007B2295 /* PkgProtect.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		25FD7A3221CB2A99004E6AB5 /* Jailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FD7A3121CB2A99004E6AB5 /* Jailer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		2573038321CB1F62007B2295 /* PkgProtectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PkgProtectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2573038821CB1F62007B2295 /* PkgProtectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PkgProtectTests.swift; sourceTree = "<group>"; };
 		2573038A21CB1F62007B2295 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25FD7A3121CB2A99004E6AB5 /* Jailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jailer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				2573037D21CB1F61007B2295 /* PkgProtect.h */,
 				2573037E21CB1F61007B2295 /* Info.plist */,
+				25FD7A3121CB2A99004E6AB5 /* Jailer.swift */,
 			);
 			path = PkgProtect;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					2573037921CB1F61007B2295 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					2573038221CB1F62007B2295 = {
 						CreatedOnToolsVersion = 10.1;
@@ -194,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25FD7A3221CB2A99004E6AB5 /* Jailer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +346,7 @@
 		2573038F21CB1F62007B2295 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -358,6 +364,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pinna.PkgProtect;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -366,6 +373,7 @@
 		2573039021CB1F62007B2295 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -391,6 +399,7 @@
 		2573039221CB1F62007B2295 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8T4P9D4TB2;
 				INFOPLIST_FILE = PkgProtectTests/Info.plist;
@@ -409,6 +418,7 @@
 		2573039321CB1F62007B2295 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8T4P9D4TB2;
 				INFOPLIST_FILE = PkgProtectTests/Info.plist;
