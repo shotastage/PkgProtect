@@ -1,5 +1,5 @@
 //
-//  Jailer.swift
+//  PkgProtect.swift
 //  PkgProtect
 //
 //  Created by Shota Shimazu on 2018/12/20.
@@ -9,7 +9,11 @@
 import Foundation
 
 
-open class Jailer {
+@available(iOS, obsoleted: 10.0, renamed: "PkgProtect")
+open class Jailer: PkgProtect { }
+
+
+open class PkgProtect {
     
     public enum Report {
         case injected
@@ -25,19 +29,19 @@ open class Jailer {
 
     
     #if DEBUG
-    public static func isSecured(_ defaultResult: Jailer.Report = .secured) -> Jailer.Report {
+    public static func isSecured(_ defaultResult: PkgProtect.Report = .secured) -> PkgProtect.Report {
         return defaultResult
     }
     #else
     
     
     // Renaming
-    public static func isSecured() -> Jailer.Report {
+    public static func isSecured() -> PkgProtect.Report {
         return fetchStatusFromServer()
     }
     
     
-    public static func fetchStatusFromServer() -> Jailer.Report {
+    public static func fetchStatusFromServer() -> PkgProtect.Report {
         
         // File Manager Instance
         let fileManager = FileManager.default

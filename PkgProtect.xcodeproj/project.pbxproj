@@ -10,7 +10,7 @@
 		2573038421CB1F62007B2295 /* PkgProtect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2573037A21CB1F61007B2295 /* PkgProtect.framework */; };
 		2573038921CB1F62007B2295 /* PkgProtectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2573038821CB1F62007B2295 /* PkgProtectTests.swift */; };
 		2573038B21CB1F62007B2295 /* PkgProtect.h in Headers */ = {isa = PBXBuildFile; fileRef = 2573037D21CB1F61007B2295 /* PkgProtect.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		25FD7A3221CB2A99004E6AB5 /* Jailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FD7A3121CB2A99004E6AB5 /* Jailer.swift */; };
+		25FD7A3221CB2A99004E6AB5 /* PkgProtect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FD7A3121CB2A99004E6AB5 /* PkgProtect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +30,7 @@
 		2573038321CB1F62007B2295 /* PkgProtectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PkgProtectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2573038821CB1F62007B2295 /* PkgProtectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PkgProtectTests.swift; sourceTree = "<group>"; };
 		2573038A21CB1F62007B2295 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		25FD7A3121CB2A99004E6AB5 /* Jailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jailer.swift; sourceTree = "<group>"; };
+		25FD7A3121CB2A99004E6AB5 /* PkgProtect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PkgProtect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +75,7 @@
 			children = (
 				2573037D21CB1F61007B2295 /* PkgProtect.h */,
 				2573037E21CB1F61007B2295 /* Info.plist */,
-				25FD7A3121CB2A99004E6AB5 /* Jailer.swift */,
+				25FD7A3121CB2A99004E6AB5 /* PkgProtect.swift */,
 			);
 			path = PkgProtect;
 			sourceTree = "<group>";
@@ -198,7 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25FD7A3221CB2A99004E6AB5 /* Jailer.swift in Sources */,
+				25FD7A3221CB2A99004E6AB5 /* PkgProtect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
