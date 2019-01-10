@@ -9,10 +9,6 @@
 import Foundation
 
 
-@available(iOS, obsoleted: 10.0, renamed: "PkgProtect")
-open class Jailer: PkgProtect { }
-
-
 open class PkgProtect {
     
     public enum Report {
