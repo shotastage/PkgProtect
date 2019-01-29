@@ -1,15 +1,15 @@
 //
-//  PkgProtectTests.swift
-//  PkgProtectTests
+//  ExampleTests.swift
+//  ExampleTests
 //
-//  Created by Shota Shimazu on 2019/01/29.
+//  Created by Shota Shimazu on 2019/01/30.
 //  Copyright © 2019 Shota Shimazu. All rights reserved.
 //
 
 import XCTest
-@testable import PkgProtect
+@testable import Example
 
-class PkgProtectTests: XCTestCase {
+class ExampleTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

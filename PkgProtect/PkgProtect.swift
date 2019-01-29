@@ -2,8 +2,8 @@
 //  PkgProtect.swift
 //  PkgProtect
 //
-//  Created by Shota Shimazu on 2018/12/20.
-//  Copyright © 2018 Shota Shimazu. All rights reserved.
+//  Created by Shota Shimazu on 2019/01/29.
+//  Copyright © 2019 Shota Shimazu. All rights reserved.
 //
 
 import Foundation
@@ -24,12 +24,6 @@ open class PkgProtect {
     }
 
     
-    #if DEBUG
-    public static func isSecured(_ defaultResult: PkgProtect.Report = .secured) -> PkgProtect.Report {
-        return defaultResult
-    }
-    #else
-    
     
     // Renaming
     public static func isSecured() -> PkgProtect.Report {
@@ -37,7 +31,13 @@ open class PkgProtect {
     }
     
     
-    public static func fetchStatusFromServer() -> PkgProtect.Report {
+    public static func fetchStatusFromServer(actualResult: Bool = true) -> PkgProtect.Report {
+        
+        #if DEBUG
+        if !actualResult {
+            return .secured
+        }
+        #endif
         
         // File Manager Instance
         let fileManager = FileManager.default

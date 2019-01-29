@@ -2,8 +2,8 @@
 //  PkgProtect.h
 //  PkgProtect
 //
-//  Created by Shota Shimazu on 2018/12/20.
-//  Copyright © 2018 Shota Shimazu. All rights reserved.
+//  Created by Shota Shimazu on 2019/01/29.
+//  Copyright © 2019 Shota Shimazu. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

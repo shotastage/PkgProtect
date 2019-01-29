@@ -7,84 +7,84 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2573038421CB1F62007B2295 /* PkgProtect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2573037A21CB1F61007B2295 /* PkgProtect.framework */; };
-		2573038921CB1F62007B2295 /* PkgProtectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2573038821CB1F62007B2295 /* PkgProtectTests.swift */; };
-		2573038B21CB1F62007B2295 /* PkgProtect.h in Headers */ = {isa = PBXBuildFile; fileRef = 2573037D21CB1F61007B2295 /* PkgProtect.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		25FD7A3221CB2A99004E6AB5 /* PkgProtect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FD7A3121CB2A99004E6AB5 /* PkgProtect.swift */; };
+		2540FBB42200A13900054309 /* PkgProtect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2540FBAA2200A13900054309 /* PkgProtect.framework */; };
+		2540FBB92200A13900054309 /* PkgProtectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2540FBB82200A13900054309 /* PkgProtectTests.swift */; };
+		2540FBBB2200A13900054309 /* PkgProtect.h in Headers */ = {isa = PBXBuildFile; fileRef = 2540FBAD2200A13900054309 /* PkgProtect.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2540FBC52200A1C500054309 /* PkgProtect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2540FBC42200A1C500054309 /* PkgProtect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2573038521CB1F62007B2295 /* PBXContainerItemProxy */ = {
+		2540FBB52200A13900054309 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2573037121CB1F61007B2295 /* Project object */;
+			containerPortal = 2540FBA12200A13900054309 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2573037921CB1F61007B2295;
+			remoteGlobalIDString = 2540FBA92200A13900054309;
 			remoteInfo = PkgProtect;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2573037A21CB1F61007B2295 /* PkgProtect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PkgProtect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2573037D21CB1F61007B2295 /* PkgProtect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PkgProtect.h; sourceTree = "<group>"; };
-		2573037E21CB1F61007B2295 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2573038321CB1F62007B2295 /* PkgProtectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PkgProtectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2573038821CB1F62007B2295 /* PkgProtectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PkgProtectTests.swift; sourceTree = "<group>"; };
-		2573038A21CB1F62007B2295 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		25FD7A3121CB2A99004E6AB5 /* PkgProtect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PkgProtect.swift; sourceTree = "<group>"; };
+		2540FBAA2200A13900054309 /* PkgProtect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PkgProtect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2540FBAD2200A13900054309 /* PkgProtect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PkgProtect.h; sourceTree = "<group>"; };
+		2540FBAE2200A13900054309 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2540FBB32200A13900054309 /* PkgProtectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PkgProtectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2540FBB82200A13900054309 /* PkgProtectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PkgProtectTests.swift; sourceTree = "<group>"; };
+		2540FBBA2200A13900054309 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2540FBC42200A1C500054309 /* PkgProtect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PkgProtect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2573037721CB1F61007B2295 /* Frameworks */ = {
+		2540FBA72200A13900054309 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2573038021CB1F62007B2295 /* Frameworks */ = {
+		2540FBB02200A13900054309 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2573038421CB1F62007B2295 /* PkgProtect.framework in Frameworks */,
+				2540FBB42200A13900054309 /* PkgProtect.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2573037021CB1F61007B2295 = {
+		2540FBA02200A13900054309 = {
 			isa = PBXGroup;
 			children = (
-				2573037C21CB1F61007B2295 /* PkgProtect */,
-				2573038721CB1F62007B2295 /* PkgProtectTests */,
-				2573037B21CB1F61007B2295 /* Products */,
+				2540FBAC2200A13900054309 /* PkgProtect */,
+				2540FBB72200A13900054309 /* PkgProtectTests */,
+				2540FBAB2200A13900054309 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		2573037B21CB1F61007B2295 /* Products */ = {
+		2540FBAB2200A13900054309 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2573037A21CB1F61007B2295 /* PkgProtect.framework */,
-				2573038321CB1F62007B2295 /* PkgProtectTests.xctest */,
+				2540FBAA2200A13900054309 /* PkgProtect.framework */,
+				2540FBB32200A13900054309 /* PkgProtectTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2573037C21CB1F61007B2295 /* PkgProtect */ = {
+		2540FBAC2200A13900054309 /* PkgProtect */ = {
 			isa = PBXGroup;
 			children = (
-				2573037D21CB1F61007B2295 /* PkgProtect.h */,
-				2573037E21CB1F61007B2295 /* Info.plist */,
-				25FD7A3121CB2A99004E6AB5 /* PkgProtect.swift */,
+				2540FBAD2200A13900054309 /* PkgProtect.h */,
+				2540FBAE2200A13900054309 /* Info.plist */,
+				2540FBC42200A1C500054309 /* PkgProtect.swift */,
 			);
 			path = PkgProtect;
 			sourceTree = "<group>";
 		};
-		2573038721CB1F62007B2295 /* PkgProtectTests */ = {
+		2540FBB72200A13900054309 /* PkgProtectTests */ = {
 			isa = PBXGroup;
 			children = (
-				2573038821CB1F62007B2295 /* PkgProtectTests.swift */,
-				2573038A21CB1F62007B2295 /* Info.plist */,
+				2540FBB82200A13900054309 /* PkgProtectTests.swift */,
+				2540FBBA2200A13900054309 /* Info.plist */,
 			);
 			path = PkgProtectTests;
 			sourceTree = "<group>";
@@ -92,25 +92,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2573037521CB1F61007B2295 /* Headers */ = {
+		2540FBA52200A13900054309 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2573038B21CB1F62007B2295 /* PkgProtect.h in Headers */,
+				2540FBBB2200A13900054309 /* PkgProtect.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2573037921CB1F61007B2295 /* PkgProtect */ = {
+		2540FBA92200A13900054309 /* PkgProtect */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2573038E21CB1F62007B2295 /* Build configuration list for PBXNativeTarget "PkgProtect" */;
+			buildConfigurationList = 2540FBBE2200A13900054309 /* Build configuration list for PBXNativeTarget "PkgProtect" */;
 			buildPhases = (
-				2573037521CB1F61007B2295 /* Headers */,
-				2573037621CB1F61007B2295 /* Sources */,
-				2573037721CB1F61007B2295 /* Frameworks */,
-				2573037821CB1F61007B2295 /* Resources */,
+				2540FBA52200A13900054309 /* Headers */,
+				2540FBA62200A13900054309 /* Sources */,
+				2540FBA72200A13900054309 /* Frameworks */,
+				2540FBA82200A13900054309 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -118,73 +118,73 @@
 			);
 			name = PkgProtect;
 			productName = PkgProtect;
-			productReference = 2573037A21CB1F61007B2295 /* PkgProtect.framework */;
+			productReference = 2540FBAA2200A13900054309 /* PkgProtect.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		2573038221CB1F62007B2295 /* PkgProtectTests */ = {
+		2540FBB22200A13900054309 /* PkgProtectTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2573039121CB1F62007B2295 /* Build configuration list for PBXNativeTarget "PkgProtectTests" */;
+			buildConfigurationList = 2540FBC12200A13900054309 /* Build configuration list for PBXNativeTarget "PkgProtectTests" */;
 			buildPhases = (
-				2573037F21CB1F62007B2295 /* Sources */,
-				2573038021CB1F62007B2295 /* Frameworks */,
-				2573038121CB1F62007B2295 /* Resources */,
+				2540FBAF2200A13900054309 /* Sources */,
+				2540FBB02200A13900054309 /* Frameworks */,
+				2540FBB12200A13900054309 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2573038621CB1F62007B2295 /* PBXTargetDependency */,
+				2540FBB62200A13900054309 /* PBXTargetDependency */,
 			);
 			name = PkgProtectTests;
 			productName = PkgProtectTests;
-			productReference = 2573038321CB1F62007B2295 /* PkgProtectTests.xctest */;
+			productReference = 2540FBB32200A13900054309 /* PkgProtectTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2573037121CB1F61007B2295 /* Project object */ = {
+		2540FBA12200A13900054309 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Shota Shimazu";
 				TargetAttributes = {
-					2573037921CB1F61007B2295 = {
+					2540FBA92200A13900054309 = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
 					};
-					2573038221CB1F62007B2295 = {
+					2540FBB22200A13900054309 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
-			buildConfigurationList = 2573037421CB1F61007B2295 /* Build configuration list for PBXProject "PkgProtect" */;
+			buildConfigurationList = 2540FBA42200A13900054309 /* Build configuration list for PBXProject "PkgProtect" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 2573037021CB1F61007B2295;
-			productRefGroup = 2573037B21CB1F61007B2295 /* Products */;
+			mainGroup = 2540FBA02200A13900054309;
+			productRefGroup = 2540FBAB2200A13900054309 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2573037921CB1F61007B2295 /* PkgProtect */,
-				2573038221CB1F62007B2295 /* PkgProtectTests */,
+				2540FBA92200A13900054309 /* PkgProtect */,
+				2540FBB22200A13900054309 /* PkgProtectTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2573037821CB1F61007B2295 /* Resources */ = {
+		2540FBA82200A13900054309 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2573038121CB1F62007B2295 /* Resources */ = {
+		2540FBB12200A13900054309 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -194,34 +194,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2573037621CB1F61007B2295 /* Sources */ = {
+		2540FBA62200A13900054309 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25FD7A3221CB2A99004E6AB5 /* PkgProtect.swift in Sources */,
+				2540FBC52200A1C500054309 /* PkgProtect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2573037F21CB1F62007B2295 /* Sources */ = {
+		2540FBAF2200A13900054309 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2573038921CB1F62007B2295 /* PkgProtectTests.swift in Sources */,
+				2540FBB92200A13900054309 /* PkgProtectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2573038621CB1F62007B2295 /* PBXTargetDependency */ = {
+		2540FBB62200A13900054309 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2573037921CB1F61007B2295 /* PkgProtect */;
-			targetProxy = 2573038521CB1F62007B2295 /* PBXContainerItemProxy */;
+			target = 2540FBA92200A13900054309 /* PkgProtect */;
+			targetProxy = 2540FBB52200A13900054309 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2573038C21CB1F62007B2295 /* Debug */ = {
+		2540FBBC2200A13900054309 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -285,7 +285,7 @@
 			};
 			name = Debug;
 		};
-		2573038D21CB1F62007B2295 /* Release */ = {
+		2540FBBD2200A13900054309 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -343,7 +343,7 @@
 			};
 			name = Release;
 		};
-		2573038F21CB1F62007B2295 /* Debug */ = {
+		2540FBBF2200A13900054309 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -370,7 +370,7 @@
 			};
 			name = Debug;
 		};
-		2573039021CB1F62007B2295 /* Release */ = {
+		2540FBC02200A13900054309 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -396,7 +396,7 @@
 			};
 			name = Release;
 		};
-		2573039221CB1F62007B2295 /* Debug */ = {
+		2540FBC22200A13900054309 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -415,7 +415,7 @@
 			};
 			name = Debug;
 		};
-		2573039321CB1F62007B2295 /* Release */ = {
+		2540FBC32200A13900054309 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -437,34 +437,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2573037421CB1F61007B2295 /* Build configuration list for PBXProject "PkgProtect" */ = {
+		2540FBA42200A13900054309 /* Build configuration list for PBXProject "PkgProtect" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2573038C21CB1F62007B2295 /* Debug */,
-				2573038D21CB1F62007B2295 /* Release */,
+				2540FBBC2200A13900054309 /* Debug */,
+				2540FBBD2200A13900054309 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2573038E21CB1F62007B2295 /* Build configuration list for PBXNativeTarget "PkgProtect" */ = {
+		2540FBBE2200A13900054309 /* Build configuration list for PBXNativeTarget "PkgProtect" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2573038F21CB1F62007B2295 /* Debug */,
-				2573039021CB1F62007B2295 /* Release */,
+				2540FBBF2200A13900054309 /* Debug */,
+				2540FBC02200A13900054309 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2573039121CB1F62007B2295 /* Build configuration list for PBXNativeTarget "PkgProtectTests" */ = {
+		2540FBC12200A13900054309 /* Build configuration list for PBXNativeTarget "PkgProtectTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2573039221CB1F62007B2295 /* Debug */,
-				2573039321CB1F62007B2295 /* Release */,
+				2540FBC22200A13900054309 /* Debug */,
+				2540FBC32200A13900054309 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2573037121CB1F61007B2295 /* Project object */;
+	rootObject = 2540FBA12200A13900054309 /* Project object */;
 }
