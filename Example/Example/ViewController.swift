@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func checkJailbroken(_ sender: Any) {
-        if PkgProtect.securedStatus == .secured {
+        if PkgProtect.actualSecuredStatus == .secured {
             let alert: UIAlertController = UIAlertController(title: "Your device is safe!",     message: "PkgProtect report your device havn't been jailbroken.", preferredStyle:  UIAlertController.Style.alert)
             
             let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
