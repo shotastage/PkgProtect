@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,13 +15,13 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxB-bz-DmB">
-                                <rect key="frame" x="42" y="122" width="290" height="51"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxB-bz-DmB">
+                                <rect key="frame" x="15" y="114" width="290" height="51"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="51" id="D85-IL-InF"/>
+                                    <constraint firstAttribute="height" constant="51" id="uzI-5y-rrv"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="PkgProtect">
@@ -33,24 +33,28 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tap below button to check Jailbroken." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nm7-f4-Zsu">
-                                <rect key="frame" x="30" y="210" width="314" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap below button to check Jailbroken." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nm7-f4-Zsu">
+                                <rect key="frame" x="6" y="210" width="308" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="NQt-F7-QZ1"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2R-VB-uGS" customClass="PkgProtectButton" customModule="Example" customModuleProvider="target">
-                                <rect key="frame" x="99" y="514" width="177" height="65"/>
+                                <rect key="frame" x="77" y="406" width="166" height="65"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="M9Y-jC-RHT"/>
+                                    <constraint firstAttribute="width" secondItem="m2R-VB-uGS" secondAttribute="height" multiplier="166:65" id="v9t-ra-Kc6"/>
+                                    <constraint firstAttribute="height" constant="65" id="zFN-pO-Xe6"/>
                                 </constraints>
                                 <state key="normal" title="CHECK"/>
                                 <connections>
                                     <action selector="checkJailbroken:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5GD-7q-1AU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arC-R7-R5o">
-                                <rect key="frame" x="166" y="597" width="42" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arC-R7-R5o">
+                                <rect key="frame" x="130" y="510" width="60" height="32"/>
                                 <state key="normal" title="EXIT"/>
                                 <connections>
                                     <action selector="exitApp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x9R-xk-XRH"/>
@@ -59,25 +63,30 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="cxB-bz-DmB" firstAttribute="leading" secondItem="nm7-f4-Zsu" secondAttribute="leading" constant="12" id="0S0-6R-2cB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="m2R-VB-uGS" secondAttribute="bottom" constant="88" id="Ekq-RR-Bek"/>
-                            <constraint firstItem="arC-R7-R5o" firstAttribute="centerX" secondItem="m2R-VB-uGS" secondAttribute="centerX" id="Gve-U0-jY7"/>
-                            <constraint firstItem="cxB-bz-DmB" firstAttribute="trailing" secondItem="nm7-f4-Zsu" secondAttribute="trailing" constant="-12" id="Hby-9W-sRo"/>
-                            <constraint firstItem="nm7-f4-Zsu" firstAttribute="centerX" secondItem="m2R-VB-uGS" secondAttribute="centerX" id="LGe-WP-nJ2"/>
-                            <constraint firstItem="cxB-bz-DmB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="102" id="ODc-OO-Sy0"/>
-                            <constraint firstItem="cxB-bz-DmB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="YBu-7M-me0"/>
-                            <constraint firstItem="nm7-f4-Zsu" firstAttribute="top" secondItem="cxB-bz-DmB" secondAttribute="bottom" constant="37" id="eQF-eH-3Ln"/>
-                            <constraint firstItem="cxB-bz-DmB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iOE-QL-Bsz"/>
-                            <constraint firstItem="arC-R7-R5o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="166" id="mgg-Vw-2Ji"/>
-                            <constraint firstItem="arC-R7-R5o" firstAttribute="top" secondItem="m2R-VB-uGS" secondAttribute="bottom" constant="18" id="sxF-ud-gUL"/>
-                            <constraint firstItem="m2R-VB-uGS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="99" id="v6f-0c-2Eg"/>
+                            <constraint firstItem="nm7-f4-Zsu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="6" id="00B-QU-rT1"/>
+                            <constraint firstItem="cxB-bz-DmB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="38f-8U-MmC"/>
+                            <constraint firstItem="nm7-f4-Zsu" firstAttribute="top" secondItem="cxB-bz-DmB" secondAttribute="bottom" constant="45" id="7ja-H1-NEU"/>
+                            <constraint firstItem="arC-R7-R5o" firstAttribute="top" secondItem="m2R-VB-uGS" secondAttribute="bottom" constant="39" id="BhG-N1-NfZ"/>
+                            <constraint firstItem="cxB-bz-DmB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="FZK-PE-wkT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nm7-f4-Zsu" secondAttribute="trailing" constant="6" id="GUL-jb-ege"/>
+                            <constraint firstItem="cxB-bz-DmB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Igh-ph-9c6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cxB-bz-DmB" secondAttribute="trailing" constant="15" id="RPT-cW-LJQ"/>
+                            <constraint firstItem="nm7-f4-Zsu" firstAttribute="centerX" secondItem="cxB-bz-DmB" secondAttribute="centerX" id="Sun-Zd-YXM"/>
+                            <constraint firstItem="arC-R7-R5o" firstAttribute="centerX" secondItem="m2R-VB-uGS" secondAttribute="centerX" id="aiH-LJ-fzz"/>
+                            <constraint firstAttribute="bottom" secondItem="m2R-VB-uGS" secondAttribute="bottom" constant="97" id="ciC-gf-J1s"/>
+                            <constraint firstItem="m2R-VB-uGS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="epz-YD-c0E"/>
+                            <constraint firstItem="arC-R7-R5o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="130" id="kI4-YL-BBO"/>
+                            <constraint firstItem="cxB-bz-DmB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="94" id="lfG-Lj-WHC"/>
+                            <constraint firstItem="m2R-VB-uGS" firstAttribute="centerX" secondItem="nm7-f4-Zsu" secondAttribute="centerX" id="p4Z-a3-Eoh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="arC-R7-R5o" secondAttribute="bottom" constant="26" id="reR-XP-c2h"/>
+                            <constraint firstItem="nm7-f4-Zsu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="6" id="sW8-dc-v97"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+            <point key="canvasLocation" x="135" y="132.04225352112675"/>
         </scene>
     </scenes>
 </document>
