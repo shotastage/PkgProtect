@@ -24,8 +24,8 @@ class ViewController: UIViewController {
     
     
     @IBAction func checkJailbroken(_ sender: Any) {
-        if PkgProtect.fetchStatusFromServer() == .secured {
-            let alert: UIAlertController = UIAlertController(title: "Your device is safe!",     message: "Jailer report your device havn't been jailbroken.", preferredStyle:  UIAlertController.Style.alert)
+        if PkgProtect.securedStatus == .secured {
+            let alert: UIAlertController = UIAlertController(title: "Your device is safe!",     message: "PkgProtect report your device havn't been jailbroken.", preferredStyle:  UIAlertController.Style.alert)
             
             let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
                 (action: UIAlertAction!) -> Void in
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
             
             present(alert, animated: true, completion: nil)
         } else {
-            let alert: UIAlertController = UIAlertController(title: "Your device is Hacked!", message: "Jailer report your device has been jailbroken!", preferredStyle:  UIAlertController.Style.alert)
+            let alert: UIAlertController = UIAlertController(title: "Your device is Hacked!", message: "PkgProtect report your device has been jailbroken!", preferredStyle:  UIAlertController.Style.alert)
             
             let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
                 (action: UIAlertAction!) -> Void in
