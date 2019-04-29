@@ -21,13 +21,13 @@ open class PkgProtect {
 
     #if DEBUG
     
-    public static var securedStatus: PkgProtect.Report {
+    public static var status: PkgProtect.Report {
         get {
             return .secured
         }
     }
     
-    public static var actualSecuredStatus: PkgProtect.Report {
+    public static var actualStatus: PkgProtect.Report {
         get {
             return invokeInjectedChecker(showReason: true)
         }
@@ -35,7 +35,7 @@ open class PkgProtect {
     
     #else
     
-    public static var securedStatus: PkgProtect.Report {
+    public static var status: PkgProtect.Report {
         get {
             return invokeInjectedChecker()
         }
@@ -75,7 +75,7 @@ open class PkgProtect {
         
         /// URL Scheme Check
         /// --------------------------------------------------------------------------------
-        guard let cydiaUrlScheme = NSURL(string: "cydia://package/com.example.package") else {
+        guard let cydiaUrlScheme = URL(string: "cydia://package/com.example.package") else {
             return .secured
         }
 
