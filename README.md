@@ -1,14 +1,10 @@
 # PkgProtect - Jailbreak Detector
 
-[![Public Authority](https://img.shields.io/badge/Public%20authority-confidential-F22613.svg)](./LICENSE)
-
-
 PkgProtect is advanced jailbreak detection for iOS. It can be utilize for preventing your application from cheating.
-
 
 ## Test Result
 
-### Available Surviallance Level
+### Available 3 check Level
 
 - Week
 - Normal
