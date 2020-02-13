@@ -17,101 +17,49 @@ open class PkgProtect {
         case secured
     }
 
-
-    #if DEBUG
     
-    public static var status: PkgProtect.Report {
-        get {
-            return .secured
-        }
-    }
-    
-    public static var actualStatus: PkgProtect.Report {
-        get {
-            return invokeInjectedChecker(showReason: true)
-        }
-    }
-    
-    #else
-    
-    public static var status: PkgProtect.Report {
-        get {
-            return invokeInjectedChecker()
-        }
-    }
-
-    #endif
-    
-    
-    
-    static func invokeInjectedChecker(showReason: Bool = false) -> PkgProtect.Report {
+    public static func diagnosis(reason: Bool = false) -> (result: PkgProtect.Report, reason: String) {
         
+        var defaultStatus: PkgProtect.Report = .secured
+        
+        var reasonString: String = ""
+
         // File Manager Instance
         let fileManager = FileManager.default
         
         
-        let checkPaths: [String] = [
-            "/Applications/Cydia.app",
+        let openableCheckList: [String] = [
             "/Library/MobileSubstrate/MobileSubstrate.dylib",
             "/Library/MobileSubstrate/DynamicLibraries/LibertySB.dylib",
+            "/private/var/lib/apt",
             "/bin/bash",
             "/usr/sbin/sshd",
             "/etc/apt",
-            "/private/var/lib/apt/",
-            "/usr/bin/ssh",
-            "/private/var/lib/apt"
+            "/usr/bin/ssh"
         ]
         
-        
-        
-        /// Simulator Check
-        /// --------------------------------------------------------------------------------
-        #if targetEnvironment(simulator)
-
-        // This is a Simulator not an idevice
-        return .secured
-        #endif
-        
-        
-        /// URL Scheme Check
-        /// --------------------------------------------------------------------------------
-        // guard let cydiaUrlScheme = URL(string: "cydia://package/com.example.package") else {
-        //     return .secured
-        // }
-
-        //if UIApplication.shared.canOpenURL(cydiaUrlScheme as URL) {
-        //
-        //if showReason {
-        //        raiseAlert(reason: "Cydia URL scheme is openable!")
-        //    }
-        //
-        //    return .injected
-        //}
-        
+        let fileExistenceCheckList: [String] = [
+            "/Library/MobileSubstrate/MobileSubstrate.dylib",
+            "/bin/bash",
+            "/usr/sbin/sshd",
+            "/etc/apt",
+            "/usr/bin/ssh"
+        ]
         
         /// Path Check
         /// --------------------------------------------------------------------------------
-        for path in checkPaths {
+        for path in fileExistenceCheckList {
             if fileManager.fileExists(atPath: path) {
-                
-                if showReason {
-                    raiseAlert(reason: "\(path) is exists!")
-                }
-                
-                return .injected
-            }
-            
-            if openable(path: path) {
-                
-                if showReason {
-                    raiseAlert(reason: "\(path) is exists!")
-                }
-                
-                return .injected
+                reasonString = "\(path) is exists!"
+                defaultStatus =  .injected
             }
         }
         
-       
+        for path in openableCheckList {
+            if openable(path: path) {
+                defaultStatus = .injected
+            }
+        }
         
         
         /// Writable Check
@@ -119,7 +67,86 @@ open class PkgProtect {
         let path = "/private/" + NSUUID().uuidString
         
         do {
-            try "anyString".write(toFile: path, atomically: true, encoding: String.Encoding.utf8)
+            try "try.writing.private.area".write(toFile: path, atomically: true, encoding: String.Encoding.utf8)
+            try fileManager.removeItem(atPath: path)
+            
+            reasonString = "Being writable to prohibited area!"
+            defaultStatus = .injected
+        } catch {
+            defaultStatus = .secured
+        }
+        
+        
+        /// Simulator Check
+        /// --------------------------------------------------------------------------------
+        #if targetEnvironment(simulator)
+        // This is a Simulator not an idevice
+        defaultStatus = .secured
+        #endif
+               
+        return (defaultStatus, reasonString)
+    }
+    
+    
+    @available(iOS, introduced: 9.0, deprecated: 13.0, renamed: "diagnosis")
+    public static func invokeInjectedChecker(showReason: Bool = false) -> PkgProtect.Report {
+        
+        var defaultStatus: PkgProtect.Report = .secured
+
+        
+        // File Manager Instance
+        let fileManager = FileManager.default
+        
+        
+        let openableCheckList: [String] = [
+            "/Applications/Cydia.app",
+            "/Library/MobileSubstrate/MobileSubstrate.dylib",
+            "/Library/MobileSubstrate/DynamicLibraries/LibertySB.dylib",
+            "/private/var/lib/apt/",
+            "/private/var/lib/apt",
+            "/bin/bash",
+            "/usr/sbin/sshd",
+            "/etc/apt",
+            "/usr/bin/ssh"
+        ]
+        
+        
+        let fileExistenceCheckList: [String] = [
+            "/Library/MobileSubstrate/MobileSubstrate.dylib",
+            "/bin/bash",
+            "/usr/sbin/sshd",
+            "/etc/apt",
+            "/usr/bin/ssh"
+        ]
+        
+        
+        /// Path Check
+        /// --------------------------------------------------------------------------------
+        for path in fileExistenceCheckList {
+            if fileManager.fileExists(atPath: path) {
+                
+                if showReason {
+                    raiseAlert(reason: "\(path) is exists!")
+                }
+                
+                defaultStatus =  .injected
+            }
+        }
+        
+        for path in openableCheckList {
+            if openable(path: path) {
+                defaultStatus = .injected
+            }
+        }
+        
+        
+        
+        /// Writable Check
+        /// --------------------------------------------------------------------------------
+        let path = "/private/" + NSUUID().uuidString
+        
+        do {
+            try "try.writing.private.area".write(toFile: path, atomically: true, encoding: String.Encoding.utf8)
             try fileManager.removeItem(atPath: path)
             
             
@@ -127,13 +154,23 @@ open class PkgProtect {
                 raiseAlert(reason: "Being writable to prohibited area!")
             }
 
-            return .injected
+            defaultStatus = .injected
             
         } catch {
-            return .secured
+            defaultStatus = .secured
         }
         
+        
+        /// Simulator Check
+        /// --------------------------------------------------------------------------------
+        #if targetEnvironment(simulator)
+        // This is a Simulator not an idevice
+        defaultStatus = .secured
+        #endif
+        
+        return defaultStatus
     }
+    
     
     
     static func openable(path: String) -> Bool {
