@@ -66,7 +66,8 @@ open class PkgProtect {
         
         /// Simulator Check
         /// --------------------------------------------------------------------------------
-        #if arch(i386) || arch(x86_64)
+        #if targetEnvironment(simulator)
+
         // This is a Simulator not an idevice
         return .secured
         #endif
@@ -74,18 +75,18 @@ open class PkgProtect {
         
         /// URL Scheme Check
         /// --------------------------------------------------------------------------------
-        guard let cydiaUrlScheme = URL(string: "cydia://package/com.example.package") else {
-            return .secured
-        }
+        // guard let cydiaUrlScheme = URL(string: "cydia://package/com.example.package") else {
+        //     return .secured
+        // }
 
-        if UIApplication.shared.canOpenURL(cydiaUrlScheme as URL) {
-            
-            if showReason {
-                raiseAlert(reason: "Cydia URL scheme is openable!")
-            }
-            
-            return .injected
-        }
+        //if UIApplication.shared.canOpenURL(cydiaUrlScheme as URL) {
+        //
+        //if showReason {
+        //        raiseAlert(reason: "Cydia URL scheme is openable!")
+        //    }
+        //
+        //    return .injected
+        //}
         
         
         /// Path Check
@@ -146,7 +147,7 @@ open class PkgProtect {
     
     
     static func raiseAlert(reason: String) {
-        let alert: UIAlertController = UIAlertController(title: "Your device is jailbroken!",     message: reason, preferredStyle:  UIAlertController.Style.alert)
+        let alert: UIAlertController = UIAlertController(title: "Your device is jailbroken!", message: reason, preferredStyle:  UIAlertController.Style.alert)
         
         let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
             (action: UIAlertAction!) -> Void in

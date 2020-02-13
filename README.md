@@ -20,6 +20,10 @@ PkgProtect will detect jailbroken iOS with any faker.
 
 
 
+# Why disabling Cydia path check
+
+Checking Cydia path is no worth to detect joilbroken device currently.
+
 # Author
 
 - Shota Shimazu
