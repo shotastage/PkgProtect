@@ -3,7 +3,7 @@
 //  PkgProtectTests
 //
 //  Created by Shota Shimazu on 2019/01/29.
-//  Copyright © 2019 Shota Shimazu. All rights reserved.
+//  Copyright © 2019-2021 Shota Shimazu. All rights reserved.
 //
 
 import XCTest
